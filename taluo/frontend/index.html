@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>塔罗牌预测</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <!-- 欢迎界面 -->
+    <div id="welcome-screen" class="screen active">
+        <h1>塔罗牌预测程序</h1>
+        <p class="intro">请记住：塔罗牌是一种自我探索的工具，结果仅供参考</p>
+        <div class="question-container">
+            <label for="question">请输入您想询问的问题：</label>
+            <textarea id="question" placeholder="例如：我未来的职业发展会如何？"></textarea>
+        </div>
+        <button id="start-btn" class="btn">开始占卜</button>
+    </div>
+
+    <!-- 洗牌界面 -->
+    <div id="shuffling-screen" class="screen">
+        <h2>正在洗牌...</h2>
+        <div class="shuffling-animation">
+            <div class="card card-1"></div>
+            <div class="card card-2"></div>
+            <div class="card card-3"></div>
+        </div>
+        <p>请专注于您的问题...</p>
+    </div>
+
+    <!-- 牌阵选择界面 -->
+    <div id="spread-selection" class="screen">
+        <h2>选择牌阵</h2>
+        <div class="spread-options">
+            <div class="spread-option" data-spread="single">
+                <h3>单牌占卜</h3>
+                <p>快速解答当前问题的核心</p>
+            </div>
+            <div class="spread-option" data-spread="three">
+                <h3>三牌阵</h3>
+                <p>过去、现在、未来的影响</p>
+            </div>
+            <div class="spread-option" data-spread="six">
+                <h3>六芒星阵</h3>
+                <p>深入分析问题的各个方面</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 结果展示界面 -->
+    <div id="result-screen" class="screen">
+        <h2>塔罗牌解读结果</h2>
+        <div id="question-display"></div>
+        <div id="spread-result"></div>
+        <button id="restart-btn" class="btn">重新占卜</button>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
